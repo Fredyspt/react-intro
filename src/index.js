@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const element = <h1>Hello, Platzi Badges!</h1>;
+const name = 'Fredy'
+const element = (
+<div>
+    <h1>Hola, soy {name}</h1>
+    <p>Soy developer</p>
+</div>
+);
 
 const container = document.getElementById('app');
-
-// ReactDOM.render(__qué__, __dónde__);
 ReactDOM.render(element, container);
