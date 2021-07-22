@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const name = 'Fredy'
-const element = (
-<div>
-    <h1>Hola, soy {name}</h1>
-    <p>Soy developer</p>
-</div>
-);
+import 'bootstrap/dist/css/bootstrap.css'
+import './global.css'
+
+import Badge from './components/Badge'
 
 const container = document.getElementById('app');
-ReactDOM.render(element, container);
+
+ReactDOM.render(<Badge />, container);
