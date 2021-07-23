@@ -6,7 +6,7 @@ import confLogo from "../images/badge-header.svg";
 class Badge extends React.Component {
   render() {
     const { firstName, lastName, jobTitle, twitter, avatarUrl } = this.props;
-
+    
     return (
       <div className="Badge">
         <div className="Badge__header">
