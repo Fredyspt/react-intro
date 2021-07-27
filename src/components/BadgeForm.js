@@ -1,21 +1,6 @@
 import React, { Component } from "react";
 
 class BadgeForm extends Component {
-  // state = {};
-  
-  // handleChange = (e) => {
-  //   // console.log({
-  //   //   // Event name for input tag
-  //   //   name: e.target.name,
-  //   //   // Value of the input
-  //   //   value: e.target.value
-  //   // });
-
-  //   this.setState({
-  //     [e.target.name]: e.target.value,
-  //   });
-  // };
-
   handleClick = (e) => {
     console.log("Button clicked");
   };

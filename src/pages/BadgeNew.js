@@ -17,6 +17,7 @@ class BadgeNew extends Component {
   handleChange = (e) => {
     this.setState({
       form: {
+        // duplicate previous form data
         ...this.state.form,
         [e.target.name]: e.target.value,
       },

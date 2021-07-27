@@ -6,6 +6,7 @@ function Layout(props) {
   return (
     <React.Fragment>
       <Navbar />
+      {/* See App.js to see the children */}
       {props.children}
     </React.Fragment>
   )
