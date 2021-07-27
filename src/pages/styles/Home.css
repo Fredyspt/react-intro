@@ -1,0 +1,21 @@
+.Home__container {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: url("../../images/stars.svg"), #1b1b25;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home__info {
+  color: #ffff;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home__astronauts {
+  margin-left: 5em;
+}
