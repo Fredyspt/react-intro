@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
-import "./styles/BadgeNew.css";
-import header from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 import PageLoading from '../components/PageLoading'
+
 import api from '../api'
+import header from "../images/platziconf-logo.svg";
+import "./styles/BadgeNew.css";
 
 class BadgeNew extends Component {
   state = { 
@@ -64,11 +65,11 @@ class BadgeNew extends Component {
                 twitter={this.state.form.twitter || 'Twitter'}
                 jobTitle={this.state.form.jobTitle || 'Job Title'}
                 email={this.state.form.email || 'Email'}
-                avatarUrl="https://www.gravatar.com/avatar?d=identicon"
               />
             </div>
 
             <div className="col-6">
+              <h1>New Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}

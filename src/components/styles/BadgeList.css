@@ -1,25 +1,19 @@
-.BadgeList__container {
-  display: flex;
-}
-
-.BadgeList__item {
-  max-width: 580px;
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  box-shadow: 2px 2px 15px lightgray;
+.BadgesList ul>li {
   margin-bottom: 1rem;
 }
 
-.BadgeList__item-img {
-  border-radius: 50%;
-  padding: 0.8rem;
-}
-
-.BadgeList__item-info {
+.BadgesListItem {
+  background: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
   display: flex;
-  align-items: center;
+  padding: 1rem;
 }
 
-.BadgeList__item-twitter {
-  color: #0000ee;
+.BadgesListItem__avatar {
+  border-radius: 50%;
+  background: #a3a3a3;
+  margin-right: 0.5rem;
+  width: 80px;
+  height: 80px;
 }

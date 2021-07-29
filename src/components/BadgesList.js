@@ -1,45 +1,63 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-import Gravatar from './Gravatar';
+import Gravatar from "./Gravatar";
 
-import './styles/BadgeList.css'
+import "./styles/BadgeList.css";
+
+class BadgesListItem extends Component {
+  render() {
+    return (
+      <div className="BadgesListItem">
+        <Gravatar
+          className="BadgesListItem__avatar"
+          email={this.props.badge.email}
+        />
+
+        <div>
+          <strong>
+            {this.props.badge.firstName} {this.props.badge.lastName}
+          </strong>
+          <br />@{this.props.badge.twitter}
+          <br />
+          {this.props.badge.jobTitle}
+        </div>
+      </div>
+    );
+  }
+}
 
 class BadgesList extends Component {
   render() {
-    if(this.props.badges.length === 0) {
+    if (this.props.badges.length === 0) {
       return (
         <div>
           <h3>No badges were found</h3>
           <Link className="btn btn-primary" to="/badges/new">
-            Create a new badge
+            Create new badge
           </Link>
         </div>
-      )
+      );
     }
+
     return (
-      <ul className="list-unstyled">
-      {this.props.badges.map((badge) => {
-        return (
-          <li key={badge.id} className="BadgeList__item">
-            <div className="BadgeList__container">
-              <Gravatar 
-                className="BadgeList__item-img"
-                email={badge.email}
-              />
-              <div className="BadgeList__item-info">
-                <ul className="list-unstyled">
-                  <li><strong>{badge.firstName} {badge.lastName}</strong></li>
-                  <li className="BadgeList__item-twitter">@{badge.twitter}</li>
-                  <li>{badge.jobTitle}</li>
-                </ul>
-              </div>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
-    )
+      <div className="BadgesList">
+        <ul className="list-unstyled">
+          {this.props.badges.map((badge) => {
+            return (
+              <li key={badge.id}>
+                <Link
+                  className="text-reset text-decoration-none"
+                  to={`/badges/${badge.id}`}
+                >
+                  <BadgesListItem badge={badge} />
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
   }
 }
 
