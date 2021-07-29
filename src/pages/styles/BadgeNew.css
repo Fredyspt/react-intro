@@ -8,3 +8,7 @@
   display: flex;
   justify-content: center;
 }
+
+.BadgeNew__hero-image {
+  max-height: 100px;
+}
